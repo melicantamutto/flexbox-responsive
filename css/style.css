@@ -8,6 +8,15 @@
 
  .container{
    background-color: #ccc;
+   width: 90%;
+   max-width: 1000px;
+   margin: auto;
+
+   /*flex*/
+   display: flex;
+   /* flex-direction: row;
+   flex-wrap: wrap; */
+   flex-flow: row wrap;
  }
 
  body{
@@ -15,22 +24,128 @@
  }
 
  header{
-   background-color: #2c3e50;
+   background-color: #5e4c68;
+   width: 100%;
+   padding: 20px;
+   /*flex*/
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row;
+   flex-wrap: wrap;
+   
  }
 
- main{
-   background-color: #fff;
- }
+header>.logo>figure>img{
+  width: 50px;
+  vertical-align: top;
+}
+
+header>.logo>figure>a{
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  line-height: 50px;
+}
+
+header>nav{
+  width: 50%;
+  /*flex*/
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+header>nav>a{
+  background-color: rgb(250, 219, 224);
+  color: #5e4c68;
+  text-align: center;
+  text-decoration: none;
+  padding:10px;
+  flex-grow:1;
+}
+
+header>nav>a:hover, footer>.links>a:hover{
+  background-color: rgb(243, 191, 200);
+}
+
+.sections{
+  background-color: rgb(248, 245, 241);
+  padding: 20px;
+  /*flex*/
+  /* display: flex; */
+  /* flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 70%; */
+  flex: 1 1 70%;
+}
+
+.sections>article{
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #5e4c68;
+}
+.sections>article:nth-last-child(1){
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+ /* main{
+   background-color: rgb(240, 238, 238);
+ } */
 
  aside{
-  background-color: #e67e22;
+  background-color: rgb(172, 82, 97);
+  padding: 20px;
+  /*flex*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 1 30%;
  }
 
- aside .widget {
-   background-color: #d35400;
+ aside>.widget {
+   background-color: rgb(97, 50, 58);
+   height: 150px;
+   margin: 10px;
  }
 
  footer{
-   background-color: #2c3e50;
+   background-color: #5e4c68;
+   width: 100%;
+   padding: 20px;
+   /*flex*/
+   display: flex;
+   justify-content: space-between;
  }
   
+ footer>.links{
+   background-color: rgb(250, 219, 224);
+   display: flex;
+   flex-wrap: wrap;
+ }
+
+ footer>.links>a{
+   flex-grow: 1;
+   padding:10px;
+   color: #5e4c68;
+   text-align: center;
+   text-decoration: none;
+ }
+
+footer>.social{
+  background-color: rgb(248, 245, 241);
+}
+
+footer>.social>a{
+  padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(172, 82, 97);
+ background-color: rgb(248, 245, 241);
+}
+
+ footer>.social>a:hover{
+  background-color: rgb(172, 82, 97);
+  color: rgb(248, 245, 241);
+ }
